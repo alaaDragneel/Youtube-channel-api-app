@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+
+  <title>Youtube Api Project</title>
+
+  <style>
+    #content, 
+    #auth-btn, 
+    #logout-btn 
+    {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="black">
+    <div class="nav-wrapper">
+      <div class="container">
+        <a href="#!" class="brand-logo">Logo</a>
+      </div>
+    </div>
+  </nav>
+  
+  <br>
+
+  <section>
+    <div class="container">
+      <p>Login With Google</p>
+      <button class="btn red" id="auth-btn">Login</button>
+      <button class="btn red" id="logout-btn">Logout</button>
+      
+      <hr>
+
+      <div id="content">
+        <div class="row">
+          <div class="col s6">
+            <form id="channel-form">
+              <div class="input-field">
+                <label for="channel-input">Enter Channel name</label>
+                <input type="text" id="channel-input" />
+                <button type="submit" class="btn grey" id="get-channel-data-btn">Get Channel Data</button>
+              </div>
+            </form>
+          </div>
+          <div id="channel-data" class="col s6"></div>
+        </div>
+        <div class="row" id="video-container"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <script src="/js/app.js"></script>
+  <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+</body>
+
+</html>
